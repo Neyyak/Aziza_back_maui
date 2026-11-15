@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MauiApp2.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MauiApp2"
+    
+    BackgroundColor="#0A0A0A"
+    Shell.ForegroundColor="#EDEDED"
+    Shell.TitleColor="#EDEDED">
+
+    <Shell.TitleView>
+        <HorizontalStackLayout
+            Spacing="12"
+            VerticalOptions="Center">
+
+            <Grid WidthRequest="42"
+                  HeightRequest="38">
+
+                <Line
+                    X1="4" Y1="34"
+                    X2="20" Y2="4"
+                    Stroke="#3B82F6"
+                    StrokeThickness="7"
+                    StrokeLineCap="Square"/>
+
+                <Line
+                    X1="21" Y1="34"
+                    X2="37" Y2="4"
+                    Stroke="#3B82F6"
+                    StrokeThickness="7"
+                    StrokeLineCap="Square"/>
+
+            </Grid>
+
+            <VerticalStackLayout
+                Spacing="0"
+                VerticalOptions="Center">
+
+                <Label
+                    Text="REESTR"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    TextColor="#EDEDED"/>
+
+                <Label
+                    Text="Student Management"
+                    FontSize="11"
+                    TextColor="#888888"/>
+
+            </VerticalStackLayout>
+
+        </HorizontalStackLayout>
+    </Shell.TitleView>
+
+    <ShellContent
+        Title="Reester"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+</Shell>
