@@ -9,47 +9,51 @@
     </ContentPage.BindingContext>
     <ScrollView>
         <Grid RowDefinitions="Auto,Auto,Auto"
-                BackgroundColor="#0A0A0A"
-                Padding="20"
-                RowSpacing="20">
+              BackgroundColor="#0A0A0A"
+              Padding="20"
+              RowSpacing="20">
             <Border Grid.Row="0"
                     Stroke="Gray"
                     StrokeShape="RoundRectangle 10"
                     Padding="15">
                 <VerticalStackLayout Spacing="10">
                     <Label Text="Add New Student"
-                            TextColor="white"
-                            FontSize="30"
-                            FontAttributes="Bold"
-                            HorizontalOptions="Center"/>
+                           TextColor="white"
+                           FontSize="30"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center"/>
                     <Border Grid.Row="0"
                             Stroke="Gray"
                             StrokeShape="RoundRectangle 10"
                             Padding="15">
-                        <Entry BackgroundColor="#0A0A0A"
-                                Placeholder="Surname*"
-                                Text="{Binding NewSurname}"/>
+                        <Entry TextColor="#EDEDED"
+                               BackgroundColor="#0A0A0A"
+                               Placeholder="Surname*"
+                               Text="{Binding NewSurname}"/>
                     </Border>
                     <Border Grid.Row="0"
                             Stroke="Gray"
                             StrokeShape="RoundRectangle 10"
                             Padding="15">
-                        <Entry BackgroundColor="#0A0A0A"
-                                Placeholder="Name*"
-                                Text="{Binding NewName}"/>
+                        <Entry TextColor="#EDEDED"
+                               BackgroundColor="#0A0A0A"
+                               Placeholder="Name*"
+                               Text="{Binding NewName}"/>
                     </Border>
                     <Border Grid.Row="0"
                             Stroke="Gray"
                             StrokeShape="RoundRectangle 10"
                             Padding="15">
-                        <Entry BackgroundColor="#0A0A0A"
-                                Placeholder="Patronymic"
-                                Text="{Binding NewPatronymic}"/>
+                        <Entry
+                            TextColor="#EDEDED"
+                            BackgroundColor="#0A0A0A"
+                            Placeholder="Patronymic"
+                            Text="{Binding NewPatronymic}"/>
                     </Border>
 
                     <Grid RowDefinitions="Auto"
-                            ColumnDefinitions="*,*"
-                            ColumnSpacing="10">
+                          ColumnDefinitions="*,*"
+                          ColumnSpacing="10">
                         <Border Grid.Row="0"
                                 Grid.Column="0"
                                 Stroke="Gray"
@@ -66,15 +70,15 @@
                                 StrokeShape="RoundRectangle 10"
                                 Padding="15">
                             <Entry TextColor="#EDEDED"
-                                    Placeholder="Group"
-                                    Text="{Binding NewGroup}"
-                                    Keyboard="Numeric"/>
+                                   Placeholder="Group"
+                                   Text="{Binding NewGroup}"
+                                   Keyboard="Numeric"/>
                         </Border>
                     </Grid>
 
                     <Label Text="{Binding ErrorMessage}"
-                            TextColor="Red"
-                            FontSize="12"/>
+                           TextColor="Red"
+                           FontSize="12"/>
                     <Grid HeightRequest="50">
 
                         <Button
@@ -101,11 +105,11 @@
                 </VerticalStackLayout>
             </Border>
             <Label Grid.Row="1"
-                    Text="Students List"
-                    FontSize="18"
-                    FontAttributes="Bold"/>
+                   Text="Students List"
+                   FontSize="18"
+                   FontAttributes="Bold"/>
             <CollectionView Grid.Row="2"
-                    ItemsSource="{Binding Students}">
+                            ItemsSource="{Binding Students}">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Border Stroke="LightGray"
@@ -113,25 +117,25 @@
                                 Padding="10"
                                 Margin="0,5">
                             <Grid ColumnDefinitions="*,*"
-                                    ColumnSpacing="10">
+                                  ColumnSpacing="10">
                                 <VerticalStackLayout Grid.Column="0"
-                                        Spacing="5">
+                                                     Spacing="5">
                                     <Label Text="{Binding Surname}"
-                                            FontSize="16"
-                                            FontAttributes="Bold"/>
+                                           FontSize="16"
+                                           FontAttributes="Bold"/>
                                     <Label Text="{Binding Name}"
-                                            FontSize="14"/>
+                                           FontSize="14"/>
                                     <Label Text="{Binding Patronymic}"
-                                            FontSize="12"
-                                            TextColor="Gray"/>
+                                           FontSize="12"
+                                           TextColor="Gray"/>
                                 </VerticalStackLayout>
                                 <VerticalStackLayout Grid.Column="1"
-                                        Spacing="5"
-                                        HorizontalOptions="End">
+                                                     Spacing="5"
+                                                     HorizontalOptions="End">
                                     <Label Text="{Binding Year, StringFormat='Year: {0}'}"
-                                            FontSize="12"/>
+                                           FontSize="12"/>
                                     <Label Text="{Binding Group, StringFormat='Group: {0}'}"
-                                            FontSize="12"/>
+                                           FontSize="12"/>
                                 </VerticalStackLayout>
                             </Grid>
                         </Border>
@@ -140,9 +144,9 @@
 
                 <CollectionView.EmptyView>
                     <Label Text="No students added yet"
-                            HorizontalOptions="Center"
-                            VerticalOptions="Center"
-                            TextColor="Gray"/>
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           TextColor="Gray"/>
                 </CollectionView.EmptyView>
             </CollectionView>
         </Grid>
