@@ -4,7 +4,6 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:MauiApp2"
-    
     BackgroundColor="#0A0A0A"
     Shell.ForegroundColor="#EDEDED"
     Shell.TitleColor="#EDEDED">
@@ -18,15 +17,19 @@
                   HeightRequest="38">
 
                 <Line
-                    X1="4" Y1="34"
-                    X2="20" Y2="4"
+                    X1="4"
+                        Y1="34"
+                    X2="20"
+                        Y2="4"
                     Stroke="#3B82F6"
                     StrokeThickness="7"
                     StrokeLineCap="Square"/>
 
                 <Line
-                    X1="21" Y1="34"
-                    X2="37" Y2="4"
+                    X1="21"
+                        Y1="34"
+                    X2="37"
+                        Y2="4"
                     Stroke="#3B82F6"
                     StrokeThickness="7"
                     StrokeLineCap="Square"/>
@@ -53,9 +56,38 @@
         </HorizontalStackLayout>
     </Shell.TitleView>
 
-    <ShellContent
+
+    <!-- Sign up -->
+    <!-- <ShellContent
         Title="Reester"
+        ContentTemplate="{DataTemplate local:SignUpPage}"
+        Route="SignUpPage" />
+
+</Shell> -->
+
+
+
+
+    <!-- Profile -->
+    <!-- <ShellContent
+        Title="Reester"
+        ContentTemplate="{DataTemplate local:ProfilPage}"
+        Route="ProfilPage" />
+
+</Shell> -->
+
+    <!-- Add -->
+    <!-- <ShellContent
+        Title="Reester"
+        ContentTemplate="{DataTemplate local:AddPage}"
+        Route="AddPage" />
+
+</Shell>  -->
+
+    <!-- Main -->
+    <ShellContent
+        Title="Главная"
         ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        Route="MainPage"/>
 
 </Shell>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.AddPage"
+             BackgroundColor="#0A0A0A"
+             Title="AddPage">
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="20">
+            <Border BackgroundColor="#171717"
+                    Stroke="#383838"
+                    StrokeThickness="1"
+                    StrokeShape="RoundRectangle 22"
+                    Padding="18">
+                <VerticalStackLayout Spacing="18">
+                    <Label Text="Добавить Объявление"
+                           TextColor="#EDEDED"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center"/>
+                    <Border Stroke="Gray"
+                            StrokeShape="RoundRectangle 10"
+                            BackgroundColor="#1F1F1F"
+                            Padding="12,0">
+                        <Entry TextColor="#EDEDED"
+                               BackgroundColor="#1F1F1F"
+                               Placeholder="Название*"
+                               x:Name="titleEntry"/>
+                    </Border>
+                    <Border Stroke="Gray"
+                            StrokeShape="RoundRectangle 10"
+                            BackgroundColor="#1F1F1F"
+                            Padding="12,0">
+                        <Entry TextColor="#EDEDED"
+                               BackgroundColor="#1F1F1F"
+                               Placeholder="Что можешь предложить*"
+                               x:Name="descriptionEntry"/>
+                    </Border>
+                    <Border Stroke="Gray"
+                            StrokeThickness="1"
+                            StrokeDashArray="5,5"
+                            StrokeShape="RoundRectangle 10"
+                            Padding="15">
+                        <VerticalStackLayout Spacing="15">
+                            <Label Text="▧"
+                                   FontSize="48"
+                                   TextColor="#A1A1AA"
+                                   HorizontalOptions="Center"/>
+
+                            <Label Text="Загрузить фотографии"
+                                   FontSize="17"
+                                   TextColor="White"
+                                   HorizontalOptions="Center"/>
+
+                            <Grid ColumnDefinitions="*,*,*,*"
+                                  ColumnSpacing="8">
+
+                            </Grid>
+                        </VerticalStackLayout>
+
+                    </Border>
+                    <Button Text="Добавить"
+                            BackgroundColor="#3B82F6"
+                            TextColor="#FFFFFF"
+                            FontSize="18"
+                            CornerRadius="10"
+                            Padding="15,0"
+                            Command="{Binding AddStudentCommand}"/>
+
+                </VerticalStackLayout>
+            </Border>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

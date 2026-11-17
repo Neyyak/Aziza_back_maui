@@ -1,9 +1,9 @@
-﻿namespace MauiApp2;
+namespace MauiApp2;
 
 public partial class MainPage : ContentPage
 {
-    public MainPage()
-    {
-        InitializeComponent();
-    }
+	public MainPage()
+	{
+		InitializeComponent();
+	}
 }
